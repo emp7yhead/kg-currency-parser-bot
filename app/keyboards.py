@@ -12,9 +12,7 @@ button_recomended = KeyboardButton(
 
 courses_kb = ReplyKeyboardMarkup(
     keyboard=[
-        [
-            button_avg, button_best, button_recomended
-        ]
+        [button_avg, button_best, button_recomended]
     ],
     resize_keyboard=True
 )
