@@ -25,6 +25,10 @@ jobs:
           URL: ${{ secrets.URL }}
         run: |
           make test
-          make coverage-report
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make coverage-report
+          debug: true
