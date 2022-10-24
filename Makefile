@@ -10,5 +10,8 @@ lint:
 test:
 	poetry run pytest app
 
+test-coverage:
+	poetry run pytest --cov=page_loader --cov-report xml
+
 .env:
 	@test ! -f .env && cp .env.example .env
