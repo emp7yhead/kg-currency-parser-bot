@@ -10,7 +10,7 @@ lint:
 test:
 	poetry run pytest .
 
-test-coverage:
+coverage-report:
 	poetry run pytest --cov=app --cov-report xml
 
 show-test-coverage:
