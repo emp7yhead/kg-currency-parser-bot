@@ -4,7 +4,7 @@ import traceback
 import pandas as pd
 import requests
 
-CURRENCY = ('USD', 'EUR', 'RUB')
+CURRENCY = ['USD', 'EUR', 'RUB']  # noqa: WPS407
 
 logger = logging.getLogger(__name__)
 
