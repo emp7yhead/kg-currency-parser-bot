@@ -8,10 +8,13 @@ lint:
 	poetry run flake8 app
 
 test:
-	poetry run pytest app
+	poetry run pytest .
 
 test-coverage:
-	poetry run pytest --cov=page_loader --cov-report xml
+	poetry run pytest --cov=app --cov-report xml
+
+show-test-coverage:
+	poetry run pytest --cov=app
 
 .env:
 	@test ! -f .env && cp .env.example .env
