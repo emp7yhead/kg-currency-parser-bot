@@ -32,4 +32,3 @@ jobs:
         with:
           coverageCommand: make coverage-report
           debug: true
-          debug: true
