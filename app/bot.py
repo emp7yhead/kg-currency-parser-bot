@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 from handlers import default_handler, currency_handler
 
-logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
 
 
 async def main():

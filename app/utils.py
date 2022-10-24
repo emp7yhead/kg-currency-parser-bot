@@ -1,12 +1,23 @@
+import logging
+import traceback
 import requests
 import pandas as pd
 
 CURRENCY = ['USD', 'EUR', 'RUB']
 
+logger = logging.getLogger(__name__)
+
 
 def parse_url_for_table(url):
     response = requests.get(url)
-    tables = pd.read_html(response.text)
+    response.raise_for_status()
+    try:
+        tables = pd.read_html(response.text)
+    except ValueError as error:
+        logger.debug(traceback.format_exc(8))
+        logger.error(f'No tables found in {url}')
+        raise error
+    logger.debug(f'Found tables in {url}')
     return tables
 
 
