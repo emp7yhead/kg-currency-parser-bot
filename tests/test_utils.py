@@ -1,7 +1,7 @@
 import pytest
 import requests_mock
 
-from app.utils import TableHandler, parse_url_for_table, update_indexes, CURRENCY
+from app.tables import TableHandler, parse_url_for_table, update_indexes, CURRENCY
 from tests.fixtures import page_without_res, test_dataframe, test_tables, TEST_URL
 
 

@@ -1,9 +1,10 @@
 import logging
 import traceback
-import requests
-import pandas as pd
 
-CURRENCY = ['USD', 'EUR', 'RUB']
+import pandas as pd
+import requests
+
+CURRENCY = ('USD', 'EUR', 'RUB')
 
 logger = logging.getLogger(__name__)
 
@@ -22,6 +23,8 @@ def parse_url_for_table(url):
 
 
 class TableHandler:
+    """Convert list of tables."""
+
     def __init__(self, tables):
         self.tables = tables
 
@@ -37,5 +40,5 @@ class TableHandler:
 
 def update_indexes(table):
     return table.set_index(
-        [pd.Index(CURRENCY)]
+        [pd.Index(CURRENCY)],
     )
