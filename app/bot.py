@@ -3,8 +3,9 @@
 import asyncio
 import logging
 import os
-from dotenv import load_dotenv
+
 from aiogram import Bot, Dispatcher
+from dotenv import load_dotenv
 from handlers import currency_handler, default_handler
 
 logging.basicConfig(level=logging.DEBUG)

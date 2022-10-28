@@ -1,8 +1,8 @@
 from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message
-from keyboards import courses_kb
 from handlers.const import GREETING
+from keyboards import courses_kb
 
 router = Router()
 
