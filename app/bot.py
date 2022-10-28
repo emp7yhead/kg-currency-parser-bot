@@ -1,7 +1,9 @@
+#! /usr/bin/env python3
+
 import asyncio
 import logging
 import os
-
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher
 from handlers import currency_handler, default_handler
 
@@ -20,4 +22,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    load_dotenv()
     asyncio.run(main())
