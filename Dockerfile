@@ -20,7 +20,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 WORKDIR /code
 
-COPY poetry.lock pyproject.toml Makefile .env  /code/
+COPY poetry.lock pyproject.toml Makefile  /code/
 
 RUN make install
 
