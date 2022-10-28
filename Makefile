@@ -19,7 +19,7 @@ show-test-coverage:
 .env:
 	@test ! -f .env && cp .env.example .env
 
-docker-build: .env
+docker-build:
 	docker build -t telegram-bot .
 
 docker-start:
