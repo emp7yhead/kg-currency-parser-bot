@@ -1,4 +1,4 @@
-install: .env
+install:
 	poetry install
 
 start:
