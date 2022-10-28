@@ -6,7 +6,7 @@ from aiogram.types import Message
 
 from tables import TableHandler, parse_url_for_table, update_indexes
 
-URL = os.getenv('URL')
+URL = os.getenv('SITE_URL')
 
 router = Router()
 
