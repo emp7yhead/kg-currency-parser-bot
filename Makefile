@@ -2,7 +2,7 @@ install: .env
 	poetry install
 
 start:
-	poetry run python3 app/bot.py
+	poetry run python3 ./app/bot.py
 
 lint:
 	poetry run flake8 app
@@ -18,3 +18,11 @@ show-test-coverage:
 
 .env:
 	@test ! -f .env && cp .env.example .env
+
+docker-build: .env
+	docker build -t telegram-bot .
+
+docker-start:
+	docker run telegram-bot 
+
+

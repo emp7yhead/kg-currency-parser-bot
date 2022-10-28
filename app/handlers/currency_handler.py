@@ -4,7 +4,7 @@ from aiogram import Router
 from aiogram.filters.text import Text
 from aiogram.types import Message
 
-from app.tables import TableHandler, parse_url_for_table, update_indexes
+from tables import TableHandler, parse_url_for_table, update_indexes
 
 URL = os.getenv('URL')
 

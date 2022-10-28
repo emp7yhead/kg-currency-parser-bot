@@ -3,7 +3,6 @@ import logging
 import os
 
 from aiogram import Bot, Dispatcher
-from dotenv import load_dotenv
 from handlers import currency_handler, default_handler
 
 logging.basicConfig(level=logging.DEBUG)
@@ -21,5 +20,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    load_dotenv()
     asyncio.run(main())
