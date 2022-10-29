@@ -26,4 +26,4 @@ RUN make install
 
 COPY . .
 
-RUN poetry run python3 ./app/bot.py;
+CMD [ "make", "start" ]
