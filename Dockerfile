@@ -25,3 +25,5 @@ COPY poetry.lock pyproject.toml Makefile  /code/
 RUN make install
 
 COPY . .
+
+CMD [ "python3", "./app/bot.py" ]
