@@ -9,7 +9,7 @@ router = Router()
 
 
 @router.message(
-    Command(commands=['average'])
+    Command(commands=['average']),
 )
 async def send_average_table(message: Message):
     parsed_tables = parse_url_for_table(URL)
@@ -19,7 +19,7 @@ async def send_average_table(message: Message):
 
 
 @router.message(
-    Command(commands=['best'])
+    Command(commands=['best']),
 )
 async def send_best_table(message: Message):
     parsed_tables = parse_url_for_table(URL)
@@ -29,7 +29,7 @@ async def send_best_table(message: Message):
 
 
 @router.message(
-    Command(commands=['recommended'])
+    Command(commands=['recommended']),
 )
 async def send_recommended_table(message: Message):
     parsed_tables = parse_url_for_table(URL)
