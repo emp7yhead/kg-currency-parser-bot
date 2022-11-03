@@ -1,5 +1,5 @@
 from aiogram import Router
-from aiogram.filters import Command, text
+from aiogram.filters import Command
 from aiogram.types import Message
 from tables import TableHandler, parse_url_for_table, update_indexes
 
@@ -9,7 +9,6 @@ router = Router()
 
 
 @router.message(
-    text.Text(text='Get average course', ignore_case=True),
     Command(commands=['average'])
 )
 async def send_average_table(message: Message):
@@ -20,7 +19,6 @@ async def send_average_table(message: Message):
 
 
 @router.message(
-    text.Text(text='Get best course', ignore_case=True),
     Command(commands=['best'])
 )
 async def send_best_table(message: Message):
@@ -31,7 +29,6 @@ async def send_best_table(message: Message):
 
 
 @router.message(
-    text.Text(text='Get recommended course', ignore_case=True),
     Command(commands=['recommended'])
 )
 async def send_recommended_table(message: Message):
